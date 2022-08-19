@@ -26,11 +26,15 @@ module CLI
       end
 
       def sorted_rows
-        data.sort_by { |_page, values| -values[sort_field] }
+        data.sort_by { |_page, values| sort_direction * values[sort_field] }
       end
 
       def headings
         %w[Page Count]
+      end
+
+      def sort_direction
+        -1
       end
 
       def sort_field
