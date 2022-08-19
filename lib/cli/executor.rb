@@ -6,13 +6,14 @@ require_relative 'processor'
 require_relative 'producers/base_output'
 require_relative 'producers/totals_output'
 require_relative 'producers/uniqs_output'
+require_relative 'producers/average_output'
 
 module CLI
   class Executor < Base
     param :file_path
     option :validator, default: proc { CLI::FileValidator }
     option :processor, default: proc { CLI::Processor }
-    option :output_producers, default: proc { [CLI::Producers::TotalsOutput, CLI::Producers::UniqsOutput] }
+    option :output_producers, default: proc { [CLI::Producers::TotalsOutput, CLI::Producers::UniqsOutput, CLI::Producers::AverageOutput] }
 
     attr_reader :data
 

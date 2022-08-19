@@ -22,14 +22,17 @@ module CLI
 
     def process_line(line)
       page, visitor_ip = line.split
-      result[page][:visits] += 1
-      result[page][:visitors] << visitor_ip
-      result[page][:uniq_visits] = result[page][:visitors].size
+      result[page] = result[page].tap do |p|
+        p[:visits] += 1
+        p[:visitors] << visitor_ip
+        p[:uniq_visits] = p[:visitors].size
+        p[:average] = p[:visits] / p[:uniq_visits].to_f
+      end
     end
 
     def result
       @result ||= Hash.new do |hash, key|
-        hash[key] = { visits: 0, visitors: Set.new, uniq_visits: 0 }
+        hash[key] = { visits: 0, visitors: Set.new, uniq_visits: 0, average: 0.0 }
       end
     end
   end
