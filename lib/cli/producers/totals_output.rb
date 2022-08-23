@@ -6,7 +6,7 @@ module CLI
       private
 
       def title
-        'List of webpages with total views'
+        I18n.t('title.totals')
       end
 
       def sort_field
@@ -14,7 +14,7 @@ module CLI
       end
 
       def field_text
-        'visits'
+        I18n.t('field_text.totals')
       end
     end
   end

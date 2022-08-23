@@ -1,0 +1,14 @@
+en:
+  error: 'Command failed with message:'
+  header:
+    page: 'Page'
+    count: 'Count'
+  title:
+    uniq:    'List of webpages with uniq views'
+    totals:  'List of webpages with total views'
+    average: 'List of webpages with average views'
+
+  field_text:
+    totals:  'visits'
+    average: 'visits'
+    uniq:    'uniq views'

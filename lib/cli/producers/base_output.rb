@@ -30,7 +30,7 @@ module CLI
       end
 
       def headings
-        %w[Page Count]
+        [I18n.t('header.page'), I18n.t('header.count')]
       end
 
       def sort_direction

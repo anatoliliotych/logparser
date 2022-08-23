@@ -6,7 +6,7 @@ module CLI
       private
 
       def title
-        'List of webpages with uniq views'
+        I18n.t('title.uniq')
       end
 
       def sort_field
@@ -14,7 +14,7 @@ module CLI
       end
 
       def field_text
-        'uniq views'
+        I18n.t('field_text.uniq')
       end
     end
   end
