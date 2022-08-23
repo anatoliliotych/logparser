@@ -4,7 +4,7 @@ module CLI
       private
 
       def title
-        'List of webpages with average views'
+        I18n.t('title.average')
       end
 
       def sort_field
@@ -16,7 +16,7 @@ module CLI
       end
 
       def field_text
-        'visits'
+        I18n.t('field_text.average')
       end
     end
   end

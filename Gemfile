@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
 gem 'dry-initializer', '~> 3.1'
+gem 'i18n'
 gem 'rspec', '~> 3.11', require: false
 gem 'rubocop', '~> 1.33', require: false
 gem 'rubycritic', '~> 4.7', require: false

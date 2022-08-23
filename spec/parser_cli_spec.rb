@@ -2,7 +2,8 @@
 
 RSpec.describe ParserCLI do
   let(:file_path) { '/path/to/file' }
-  subject { described_class.new.process(file_path) }
+  let(:locale) { 'fr' }
+  subject { described_class.new.process(file_path, locale) }
 
   context 'when sucessful flow' do
     before(:each) do
@@ -10,6 +11,11 @@ RSpec.describe ParserCLI do
     end
 
     it { should be nil }
+
+    it "sets locale" do
+      expect(I18n).to receive('default_locale=').with(:fr)
+      subject
+    end
   end
 
   context 'when errorneous flow' do

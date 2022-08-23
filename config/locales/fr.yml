@@ -1,0 +1,14 @@
+fr:
+  error: 'Command failed with message fr:'
+  header:
+    page: 'Page fr'
+    count: 'Count fr'
+  title:
+    uniq: 'Liste des pages Web avec des vues uniques'
+    totals:  'List of webpages with total views fr'
+    average: 'List of webpages with average views fr'
+
+  field_text:
+    totals:  'visits fr'
+    average: 'visits fr'
+    uniq:    'uniq views fr'
